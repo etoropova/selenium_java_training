@@ -1,10 +1,12 @@
 package htoropova;
 
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.remote.CapabilityType;
 
@@ -36,7 +38,7 @@ public class TestBase {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setBrowserName(PropertyLoader.loadProperty("browser.name"));
 		capabilities.setVersion(PropertyLoader.loadProperty("browser.version"));
-		capabilities.setCapability(CapabilityType.PROXY, new Proxy().setHttpProxy(myProxy));
+        capabilities.setCapability(CapabilityType.PROXY, new Proxy().setHttpProxy(myProxy));
 		
 		String platform = PropertyLoader.loadProperty("browser.platform");
 		 
@@ -45,7 +47,8 @@ public class TestBase {
 		}
 
 		if (!(null == gridHubUrl || "".equals(gridHubUrl))) {
-			driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
+		driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
+			
 		} else {
 			driver = WebDriverFactory.getDriver(capabilities);
 		}

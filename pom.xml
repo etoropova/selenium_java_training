@@ -61,13 +61,14 @@
   <!-- profiles -->
   <profiles>
     <profile>
-      <id>local</id>
+      <id>firefox_local</id>
       <properties>
         <env>local</env>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>http://localhost/</site.url>
+        <site.url>http://aavtrain.com</site.url>
+		<firefox.proxy>10.233.104.141:3128</firefox.proxy>
         <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
@@ -77,39 +78,40 @@
       </activation>
     </profile>
     <profile>
-      <id>dev</id>
+      <id>ie_local</id>
       <properties>
-        <env>dev</env>
+        <env>local</env>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>http://devhost/</site.url>
-        <browser.name>firefox</browser.name>
+        <site.url>http://aavtrain.com</site.url>
+        <browser.name>ie</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
     </profile>
     <profile>
-      <id>test</id>
+      <id>chrome_local</id>
       <properties>
         <env>test</env>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
         <site.url>http://testhost/</site.url>
-        <browser.name>firefox</browser.name>
+        <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
     </profile>
     <profile>
-      <id>prod</id>
+      <id>firefox_remote</id>
       <properties>
-        <env>prod</env>
+        <env>remote</env>
         <user.username></user.username>
         <user.password></user.password>
-        <grid2.hub></grid2.hub>
-        <site.url>http://prodhost/</site.url>
+        <grid2.hub>http://10.233.53.46:4444/wd/hub</grid2.hub>
+        <site.url>http://aavtrain.com</site.url>
+		<firefox.proxy>10.233.104.141:3128</firefox.proxy>
         <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>

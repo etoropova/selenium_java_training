@@ -18,10 +18,12 @@ public class LoginTest extends htoropova.TestBase {
   @Test
   public void testUntitled() throws Exception {  
 	driver.get(baseUrl + "/index.asp");
-	driver.findElement(By.name("user_name")).clear();
-    driver.findElement(By.name("user_name")).sendKeys("admin");
-    driver.findElement(By.name("password")).clear();
-    driver.findElement(By.name("password")).sendKeys("admin");
+	WebElement userNameField = driver.findElement(By.name("user_name"));
+	userNameField.clear();
+    userNameField.sendKeys("admin");
+    WebElement passwordField = driver.findElement(By.name("password"));
+	passwordField.clear();
+    passwordField.sendKeys("admin");
     driver.findElement(By.name("Submit")).click();
   }
 
