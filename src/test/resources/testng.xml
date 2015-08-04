@@ -4,7 +4,7 @@
 	<test name="Test1">
 		<parameter name="path" value="/"/>
 		<classes>
-		    <class name="htoropova.LoginTest"/>
+		    <class name="htoropova.LocationEditor"/>
 		</classes>
 	</test>  
 </suite>
