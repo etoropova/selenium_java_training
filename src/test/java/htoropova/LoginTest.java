@@ -15,7 +15,7 @@ public class LoginTest extends htoropova.TestBase {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
-  @Test
+  //@Test
   public void testUntitled() throws Exception {  
 	driver.get(baseUrl + "/index.asp");
 	WebElement userNameField = driver.findElement(By.name("user_name"));
@@ -39,7 +39,7 @@ public class LoginTest extends htoropova.TestBase {
   private String closeAlertAndGetItsText() {
     try {
       Alert alert = driver.switchTo().alert();
-      String alertText = alert.getText();
+      String alertText = alert.getText();  
       if (acceptNextAlert) {
         alert.accept();
       } else {

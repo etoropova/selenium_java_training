@@ -29,7 +29,7 @@ public class TestBase {
 	
 	protected String myProxy;
 
-	@BeforeClass
+	//@BeforeClass
 	public void init() {
 		baseUrl = PropertyLoader.loadProperty("site.url");
 		gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
@@ -55,7 +55,7 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@AfterSuite(alwaysRun = true)
+	//@AfterSuite(alwaysRun = true)
 	public void tearDown() {
 		if (driver != null) {
 			WebDriverFactory.dismissDriver(driver);
