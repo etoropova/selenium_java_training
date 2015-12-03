@@ -21,7 +21,12 @@
       <groupId>ru.stqa.selenium</groupId>
       <artifactId>webdriver-factory</artifactId>
       <version>1.1.46</version>
-    </dependency>	
+    </dependency>
+	<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+</dependency>
   </dependencies>
   <build>
     <resources> 
@@ -72,6 +77,8 @@
         <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
+        <uhd.location.url>/wiwauth/uhdloc</uhd.location.url>
+        <env.ip>http://10.36.219.18</env.ip>
       </properties>
       <activation>
         <activeByDefault>true</activeByDefault>

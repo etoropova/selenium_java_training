@@ -1,20 +1,12 @@
 package htoropova;
 
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.remote.CapabilityType;
-
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-
 import ru.stqa.selenium.factory.WebDriverFactory;
-
 import htoropova.util.PropertyLoader;
 
 /**
